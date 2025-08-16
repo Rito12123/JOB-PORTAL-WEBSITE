@@ -1,0 +1,17 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer base {
+  body {
+    background-color: white;
+    color: hsl(220, 13%, 20%);
+  }
+}
+
+
+
+
+
+
+
