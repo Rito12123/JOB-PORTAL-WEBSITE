@@ -18,7 +18,7 @@ const server = http.createServer(app);
 // ✅ Allowed origins for CORS (local + production)
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://job-portal-azure-zeta.vercel.app" // ⬅ Replace with your actual Vercel URL
+  "https://job-portal-website-lac.vercel.app" // ⬅ Replace with your actual Vercel URL
 ];
 
 // ✅ Middleware
