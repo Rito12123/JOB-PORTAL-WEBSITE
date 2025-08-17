@@ -29,17 +29,18 @@ app.use(cookieParser());
 app.use(
   cors({
     origin: (origin, callback) => {
-      console.log("🔎 Incoming request from origin:", origin);
-      if (!origin || allowedOrigins.some(o => (o instanceof RegExp ? o.test(origin) : o === origin))) {
-        callback(null, true);
+      console.log("🌍 Request from origin:", origin);
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true); // ✅ allow
       } else {
         console.warn("❌ Blocked by CORS:", origin);
         callback(new Error("Not allowed by CORS"));
       }
     },
-    credentials: true
+    credentials: true,
   })
 );
+
 
 // ✅ API Routes
 app.use("/api/v1/user", userRoute);
